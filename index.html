@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        const domain=""
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" ></script>
+    <meta charset="UTF-8">
+    <meta name="description" content="Trang dùng để lưu quá trình chi tiêu của bản thân">
+    <meta name="keywords" content="Chi tiêu, quản lý, money, app">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="/asset/css/login.css">
+    <link rel="stylesheet" href="/asset/css/main.css">
+    <link rel="stylesheet" href="/asset/css/home.css">
+</head>
+<body>
+    <div id="bg">
+        <img id="bgImg" src="https://images.unsplash.com/photo-1608501078713-8e445a709b39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2FsbHBhcGVyJTIwNGt8ZW58MHx8MHx8fDA%3D&w=1000&q=80" alt="">
+    </div>
+    <div id="overlay-login">
+         <div class="box loginBox">
+            <h1>Đăng nhập</h1>
+            <form action="">
+                <div class="inputBoxStyle">
+                    <label for="unLogin">Tên đăng nhập</label>
+                    <br>
+                    <input id="unLogin" type="text">
+                </div>
+                <div class="inputBoxStyle">
+                    <label for="pwLogin">Mật khẩu:</label>
+                    <br>
+                    <input id="pwLogin" type="password">
+                </div>
+                <p class="noiceLogin"></p>
+                <div class="inline">
+                    <button id="loginBtn" type="button">Đăng nhập</button>
+                <p id="creAccBtn">Tạo tài khoản?</p>
+                </div>
+            </form>
+        </div> 
+        <div class="box signInBox">
+            <h1>Đăng ký</h1>
+            <form action="">
+                <div class="inputBoxStyle">
+                    <label for="unSignIn">Tên đăng nhập</label>
+                    <br>
+                    <input id="unSignIn" type="text">
+                </div>
+                <div class="inputBoxStyle">
+                    <label for="pwSignIn">Mật khẩu:</label>
+                    <br>
+                    <input id="pwSignIn" type="password">
+                </div>
+                <div class="inputBoxStyle">
+                    <label for="pwSignIn2">Nhập lại mật khẩu:</label>
+                    <br>
+                    <input id="pwSignIn2" type="password">
+                </div>
+                <div class="inputBoxStyle">
+                    <label for="apiSignIn">Mock API:</label>
+                    <br>
+                    <input id="apiSignIn" type="text">
+                </div>
+                <p class="noiceLogin"></p>
+                <div class="inline">
+                    <p id="backCreAccBtn">Trở lại</p>
+                    <button id="signInBtn" type="button">Đăng ký</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="home">
+        <header>
+            <h1>Quản lý chi tiêu cá nhân</h1>
+        </header>
+        <div id="bodyMain">
+            <div id="bodyLeft">
+                <h2>Tổng quan</h2>
+                <div class="inputBoxStyle">
+                    <label for="typeThongKe">Thống kê theo: </label>
+                    <select name="typeThongKe" id="typeThongKe">
+                        <option value="w">Trong tuần</option>
+                        <option value="m">Trong tháng</option>
+                        <option value="y">Trong năm</option>
+                    </select>
+                    <div class="thongKeBox">
+                        <div class="indexScaleBox">
+                            <div class="indexY">
+                                
+                            </div>
+                            <div class="rootBox"></div>
+                        </div>
+                        <div class="graphScaleBox">
+                            <div class="graphBox">
+                                <!-- <div class="charIndexBox">
+                                    <div class="char"></div>
+                                </div> -->
+                                
+                            </div>
+                            <div class="indexX">
+                                <!-- <p>T2</p> -->
+                                
+                            </div>
+                        </div>
+                        <div id="boxDetailOfChar">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bodyRight">
+                <div id="editor">
+                    <div class="statisticBox">
+                        <h1></h1>
+                        <ul>
+                            <li>
+                                <p>Tổng chi tiêu: </p>
+                                <p class="statistic">0 đ</p>
+                            </li>
+                            <li>
+                                <p>Trung bình: </p>
+                                <p class="statistic">0 đ</p>
+                            </li>
+                            <li>
+                                <p>Tổng hôm nay: </p>
+                                <p class="statistic">0 đ</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <button id="addChiTieu" type="button">Thêm chi tiêu mới</button>
+                </div>
+                <div id="detailsOfDay">
+                    <h1>Chi tiêu cụ thể</h1>
+                    <ul class="listDetailOfDay">
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="overplay-form">
+        <div class="chiTieuBox">
+            <h1>Chi tiêu mới:</h1>
+            <div class="inputBoxStyle">
+                <label for="typeChiTieu">Loại chi tiêu: </label>
+                <select name="typeChiTieu" id="typeChiTieu">
+                    <option value="AnUong">Ăn uống</option>
+                    <option value="VuiChoi">Vui chơi</option>
+                    <option value="GiaDung">Gia dụng</option>
+                    <option value="HocTap">Học Tập</option>
+                    <option value="HoaDon">Hóa đơn</option>
+                    <option value="Khac">Khác</option>
+                </select>
+                <br>
+            </div>
+            <div class="inputBoxStyle">
+                <label for="timeChiTieu">Ngày chi tiêu: </label>
+                <br>
+                <input id="timeChiTieu" type="date" >
+            </div>
+            <div class="inputBoxStyle">
+                <label for="nameChiTieu">Tên chi tiêu: </label>
+                <br>
+                <input id="nameChiTieu" type="text">
+            </div>
+            <div class="inputBoxStyle">
+                <label for="valueChiTieu">Số tiền: </label>
+                <br>
+                <input id="valueChiTieu" type="text">
+            </div>
+            <p></p>
+            <div class="inputBoxStyle">
+                <button>Lưu</button>
+                <button>Hủy</button>
+            </div>
+        </div>
+    </div>
+    <script src="/asset/js/main.js"></script>
+    <script src="/asset/js/app.js"></script>
+</body>
+</html>

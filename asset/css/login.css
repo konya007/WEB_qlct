@@ -1,0 +1,76 @@
+#overlay-login,#overplay-form{
+    display: none;
+    transition: all;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: brightness(0.4);
+}
+
+.box {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.loginBox,
+.signInBox,
+.chiTieuBox{
+    margin: auto;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    transition: border 1s linear;
+    animation: outlineEfx 5s infinite;
+}
+
+.noiceLogin{
+    font-size: 0.9rem;
+    color: red;
+}
+
+#creAccBtn,
+#backCreAccBtn{
+    transition: all 0.2s;
+    cursor: pointer;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+#creAccBtn:hover,
+#backCreAccBtn:hover{
+    text-shadow: 0 0 5px #fff;
+}
+
+@keyframes outlineEfx{
+    0%{
+        border-bottom: 2px solid #ff0000 ;
+        border-left: 2px solid #bfff00 ;
+        border-top: 2px solid #00f7ff ;
+        border-right: 2px solid #c300ff ;
+    }
+    25%{
+        border-bottom: 2px solid #ffee00 ;
+        border-left: 2px solid #00ff5e ;
+        border-top: 2px solid #00a6ff ;
+        border-right: 2px solid #ff0000 ;
+    }
+    50%{
+        border-bottom: 2px solid #00ff1e ;
+        border-left: 2px solid #006aff ;
+        border-top: 2px solid #ff0000 ;
+        border-right: 2px solid #fff200 ;
+    }
+    75%{
+        border-bottom: 2px solid #1e00ff ;
+        border-left: 2px solid #ff0000 ;
+        border-top: 2px solid #eaff00 ;
+        border-right: 2px solid #00ff22 ;
+    }
+    100%{
+        border-bottom: 2px solid #ff0000 ;
+        border-left: 2px solid #bfff00 ;
+        border-top: 2px solid #00f7ff ;
+        border-right: 2px solid #c300ff ;
+    }
+}
